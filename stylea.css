@@ -1,0 +1,260 @@
+/* ===========================================
+   NEWS SECTION
+=========================================== */
+
+.news{
+    padding:120px 10%;
+    background:#050505;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#101010;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.5s;
+    position:relative;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,
+    rgba(255,30,60,.15),
+    rgba(0,191,255,.15));
+    opacity:0;
+    transition:.5s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.03);
+    box-shadow:0 20px 45px rgba(255,30,60,.35);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card .content{
+    padding:25px;
+}
+
+.card h2{
+    color:#ff3355;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#bbb;
+    line-height:1.7;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:18px;
+    color:#00bfff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.card a:hover{
+    letter-spacing:1px;
+}
+
+/* ===========================================
+   GALLERY
+=========================================== */
+
+#gallery{
+    padding:120px 8%;
+    background:#090909;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.5s;
+    cursor:pointer;
+    border:2px solid transparent;
+}
+
+.gallery img:hover{
+    transform:scale(1.05) rotate(.5deg);
+    border-color:#ff3355;
+    box-shadow:0 0 35px rgba(255,30,60,.45);
+}
+
+/* ===========================================
+   TIMELINE
+=========================================== */
+
+#timeline{
+    padding:120px 10%;
+    background:#050505;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.timeline .box{
+
+    padding:35px;
+
+    background:#111;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.5s;
+
+    border-left:4px solid #ff3355;
+
+}
+
+.timeline .box:hover{
+
+    transform:translateY(-10px);
+
+    border-left:4px solid #00bfff;
+
+    box-shadow:0 0 35px rgba(0,191,255,.35);
+
+}
+
+.timeline h2{
+
+    margin-bottom:15px;
+
+    color:#ff3355;
+
+}
+
+.timeline p{
+
+    color:#bbb;
+
+    line-height:1.7;
+
+}
+
+/* ===========================================
+   TRAILER
+=========================================== */
+
+#trailer{
+
+    padding:120px 8%;
+
+    background:#090909;
+
+}
+
+.video{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:0 0 50px rgba(255,40,60,.35);
+
+    transition:.5s;
+
+}
+
+.video:hover{
+
+    transform:scale(1.02);
+
+}
+
+.video iframe{
+
+    display:block;
+
+    border:none;
+
+}
+
+/* ===========================================
+   COUNTDOWN
+=========================================== */
+
+#countdown{
+
+    padding:120px 10%;
+
+    text-align:center;
+
+    background:#050505;
+
+}
+
+#timer{
+
+    margin-top:40px;
+
+    font-size:70px;
+
+    font-weight:700;
+
+    color:#ff3355;
+
+    text-shadow:0 0 30px rgba(255,40,60,.6);
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
